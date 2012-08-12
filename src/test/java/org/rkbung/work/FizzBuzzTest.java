@@ -1,8 +1,6 @@
 package org.rkbung.work;
 
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,9 +16,7 @@ import static org.junit.Assert.assertThat;
  * Time: 19:35
  */
 public class FizzBuzzTest {
-    private static final Logger LOGGER = LoggerFactory.getLogger(FizzBuzzTest.class);
-
-    private FizzBuzz fizzBuzz = new FizzBuzz();
+    private final FizzBuzz fizzBuzz = new FizzBuzz();
 
     @Test
     public void testGetList() throws Exception {
