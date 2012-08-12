@@ -27,17 +27,16 @@ public class GeneratorTest {
         assertThat(ticket, is(notNullValue()));
         final Set<Integer> numbers = ticket.getNumbers();
         final Set<Integer> stars = ticket.getStars();
-        LOGGER.debug("numbers : {}", numbers);
-        LOGGER.debug("stars : {}", stars);
+        LOGGER.debug("Ticket : {}", ticket);
         assertThat(numbers.size(), is(5));
         assertThat(stars.size(), is(2));
         for (Integer number : numbers) {
-            assertThat(number >= 1, is(true));
-            assertThat(number <= 50, is(true));
+            assertThat(number >= Generator.INCLUSIVE_NUMBERS_MIN, is(true));
+            assertThat(number <= Generator.INCLUSIVE_NUMBERS_MAX, is(true));
         }
         for (Integer star : stars) {
-            assertThat(star >= 1, is(true));
-            assertThat(star <= 50, is(true));
+            assertThat(star >= Generator.INCLUSIVE_STARS_MIN, is(true));
+            assertThat(star <= Generator.INCLUSIVE_STARS_MAX, is(true));
         }
     }
 }

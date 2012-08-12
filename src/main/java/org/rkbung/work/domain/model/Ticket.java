@@ -8,7 +8,7 @@ import java.util.Set;
  * Date: 12/08/12
  * Time: 17:42
  */
-public class Ticket {
+public class Ticket extends BaseObject {
     private Set<Integer> numbers = new HashSet<>(5);
 
     private Set<Integer> stars = new HashSet<>(2);
