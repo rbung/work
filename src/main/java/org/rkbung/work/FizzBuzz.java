@@ -23,7 +23,7 @@ public class FizzBuzz {
             if (StringUtils.isEmpty(value)) {
                 value = String.valueOf(i);
             }
-            LOGGER.debug("Adding {}", value);
+            LOGGER.debug("Current integer : {} - Adding {}", i, value);
             result.add(value);
         }
         return result;
