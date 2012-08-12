@@ -121,7 +121,7 @@ public class FizzBuzzTest {
         expectedResult.add("98");
         expectedResult.add("Fizz");
         expectedResult.add("Buzz");
-        final List<String> list = fizzBuzz.getList();
+        final List<String> list = fizzBuzz.getList(100);
         assertThat(list, is(notNullValue()));
         assertThat(list.size(), is(100));
         assertThat(list, is(expectedResult));
