@@ -1,6 +1,7 @@
-package org.rkbung.work;
+package org.rkbung.work.services.fizzbuzz;
 
 import org.junit.Test;
+import org.rkbung.work.services.fizzbuzz.FizzBuzz;
 
 import java.util.ArrayList;
 import java.util.List;

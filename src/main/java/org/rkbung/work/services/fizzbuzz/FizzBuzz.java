@@ -1,4 +1,4 @@
-package org.rkbung.work;
+package org.rkbung.work.services.fizzbuzz;
 
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
