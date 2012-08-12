@@ -27,7 +27,7 @@ public class GeneratorTest {
         assertThat(ticket, is(notNullValue()));
         final Set<Integer> numbers = ticket.getNumbers();
         final Set<Integer> stars = ticket.getStars();
-        LOGGER.debug("Ticket : {}", ticket);
+        LOGGER.debug("Ticket to test : {}", ticket);
         assertThat(numbers.size(), is(5));
         assertThat(stars.size(), is(2));
         for (Integer number : numbers) {
