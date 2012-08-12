@@ -19,7 +19,7 @@ public class FizzBuzzTest {
     private final FizzBuzz fizzBuzz = new FizzBuzz();
 
     @Test
-    public void testGetList() throws Exception {
+    public void testGetList_100() throws Exception {
         List<String> expectedResult = new ArrayList<>();
         expectedResult.add("1");
         expectedResult.add("2");
@@ -126,4 +126,46 @@ public class FizzBuzzTest {
         assertThat(list.size(), is(100));
         assertThat(list, is(expectedResult));
     }
+
+    @Test
+    public void testGetList_23() throws Exception {
+        List<String> expectedResult = new ArrayList<>();
+        expectedResult.add("1");
+        expectedResult.add("2");
+        expectedResult.add("Fizz");
+        expectedResult.add("4");
+        expectedResult.add("Buzz");
+        expectedResult.add("Fizz");
+        expectedResult.add("7");
+        expectedResult.add("8");
+        expectedResult.add("Fizz");
+        expectedResult.add("Buzz");
+        expectedResult.add("11");
+        expectedResult.add("Fizz");
+        expectedResult.add("13");
+        expectedResult.add("14");
+        expectedResult.add("FizzBuzz");
+        expectedResult.add("16");
+        expectedResult.add("17");
+        expectedResult.add("Fizz");
+        expectedResult.add("19");
+        expectedResult.add("Buzz");
+        expectedResult.add("Fizz");
+        expectedResult.add("22");
+        expectedResult.add("23");
+        final List<String> list = fizzBuzz.getList(23);
+        assertThat(list, is(notNullValue()));
+        assertThat(list.size(), is(23));
+        assertThat(list, is(expectedResult));
+    }
+
+    @Test
+    public void testGetList_0() throws Exception {
+        List<String> expectedResult = new ArrayList<>();
+        final List<String> list = fizzBuzz.getList(0);
+        assertThat(list, is(notNullValue()));
+        assertThat(list.size(), is(0));
+        assertThat(list, is(expectedResult));
+    }
+
 }
